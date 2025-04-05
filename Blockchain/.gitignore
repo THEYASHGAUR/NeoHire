@@ -1,0 +1,22 @@
+# Node dependencies
+node_modules/
+package-lock.json
+
+# Environment variables
+.env
+
+# Hardhat artifacts and cache
+artifacts/
+cache/
+
+# Compiled contracts
+*.json
+
+# Hardhat generated files
+typechain/
+coverage/
+coverage.json
+
+# IDE and OS-specific files
+.DS_Store
+Thumbs.db

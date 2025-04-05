@@ -1,0 +1,15 @@
+streamlit
+crewai
+typing-extensions
+langchain
+pydantic
+google-generativeai
+flask 
+flask-cors
+uuid
+python-dotenv
+pyPDF2
+
+# script to run this model on streamlit
+# .\.venv\Scripts\Activate
+# streamlit run ./yourfile.py
