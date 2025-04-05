@@ -1,6 +1,4 @@
-Here’s your **updated and properly formatted `README.md`** file with clear instructions and consistent structure for setting up and understanding the **AI-Powered Talent Management System with Blockchain Resume Verification**:
 
----
 
 # 🚀 AI-Powered Talent Management System with Blockchain Resume Verification
 
