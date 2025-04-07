@@ -12,6 +12,7 @@ const AI_MODEL_URL = "http://localhost:8000/score";
 
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 const upload = multer({ dest: "uploads/" });
 

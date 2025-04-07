@@ -4,7 +4,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Dashboard from './pages/Dashboard';
 import Auth from './pages/Auth';
 import ResumeUpload from './pages/ResumeUpload';
-import JobMatching from './pages/JobMatching';
+import JobMatcher from './pages/JobMatching/JDMatcher';
 import Settings from './pages/Settings';
 import Payments from './pages/Payments';
 
@@ -65,7 +65,8 @@ function App() {
             path="/job-matching"
             element={
               <PrivateRoute>
-                <JobMatching />
+                {/* <JobMatching /> */}
+                <JobMatcher/>
               </PrivateRoute>
             }
           />
