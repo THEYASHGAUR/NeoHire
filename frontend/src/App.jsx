@@ -6,7 +6,7 @@ import Auth from './pages/Auth';
 import ResumeUpload from './pages/ResumeUpload';
 import JobMatcher from './pages/JobMatching/JDMatcher';
 import Settings from './pages/Settings';
-import Payments from './pages/Payments';
+// import Payments from './pages/Payments';
 
 // Protected Route Component
 const PrivateRoute = ({ children }) => {
@@ -78,14 +78,14 @@ function App() {
               </PrivateRoute>
             }
           /> 
-          <Route
+          {/* <Route
             path="/payments"
             element={
               <PrivateRoute>
                 <Payments />
               </PrivateRoute>
             }
-          /> 
+          />  */}
 
           {/* Catch all route - redirect to dashboard if authenticated, otherwise to auth */}
           <Route
