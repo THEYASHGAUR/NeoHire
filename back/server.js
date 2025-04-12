@@ -15,9 +15,7 @@ app.use(express.json());
 
 const upload = multer({ dest: "uploads/" });
 
-app.post(
-  "/api/extract-text",
-  upload.fields([
+app.post("/api/extract-text",upload.fields([
     { name: "files", maxCount: 10 }, // Resume files
     { name: "jd", maxCount: 1 },     // JD file
   ]),
@@ -88,6 +86,13 @@ app.post(
     } catch (error) {
       console.error("❌ Error processing file:", error);
       res.status(500).json({ error: "Error extracting text" });
+    }
+
+    // another try catch for blockchain hashing 
+    try {
+      
+    } catch (error) {
+      
     }
   }
 );
