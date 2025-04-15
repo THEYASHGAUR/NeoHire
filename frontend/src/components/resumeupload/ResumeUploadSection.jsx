@@ -80,7 +80,7 @@ const ResumeUploadSection = ({
             Drag & Drop Resumes Here
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Supports PDF, DOCX, and TXT formats
+            Supports PDF and DOCX formats only
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <label className="inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200 cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0">
@@ -106,7 +106,7 @@ const ResumeUploadSection = ({
               <Check className="w-5 h-5 mr-2" />
               Submit Resumes
             </button>
-          </div>
+          </div> 
         </div>
       </div>
 

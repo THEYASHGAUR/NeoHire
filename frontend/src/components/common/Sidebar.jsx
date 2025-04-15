@@ -42,7 +42,7 @@ const Sidebar = ({ isDarkMode, toggleDarkMode, isCollapsed, toggleCollapse }) =>
     { path: '/resume-upload', icon: <FileText className="w-5 h-5" />, label: 'Resumes' },
     // { path: '/job-matching', icon: <Users className="w-5 h-5" />, label: 'Job Matching' },
     { path: '/settings', icon: <Settings className="w-5 h-5" />, label: 'Settings' },
-    { path: '/payments', icon: <WalletCards className="w-5 h-5" />, label: 'Payments' }
+    // { path: '/payments', icon: <WalletCards className="w-5 h-5" />, label: 'Payments' }
   ];
 
   return (
