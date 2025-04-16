@@ -32,9 +32,9 @@ The **AI-Powered Talent Management System** is an innovative platform that lever
 
 | Layer         | Tech Stack                                      |
 |---------------|--------------------------------------------------|
-| **Frontend**  | React.js, HTML5, CSS3                            |
-| **Backend**   | Python (Flask / Django), Node.js (optional)     |
-| **AI/ML**     | Scikit-learn, TensorFlow, NLP Models             |
+| **Frontend**  | React.js, HTML5, CSS3, TailwindCSS                            |
+| **Backend**   | Node.js , Express.js     |
+| **AI/ML**     |  Flask,  AI Agents , Langchain, Google Generative AI            |
 | **Blockchain**| Ethereum / Hyperledger Fabric                    |
 | **Database**  | MongoDB / PostgreSQL                             |
 | **Deployment**| Docker, AWS / GCP                                |
@@ -63,7 +63,7 @@ python app.py
 ```bash
 cd backend
 npm install
-node server.js
+npm run dev
 ```
 
 ---
