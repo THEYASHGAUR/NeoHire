@@ -7,14 +7,14 @@ const cors = require("cors");
 const axios = require("axios");
 
 const app = express();
-const port = 5000;
-const AI_MODEL_URL = "http://localhost:8000/score";
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const upload = multer({ dest: "uploads/" });
+const AI_MODEL_URL = "http://localhost:8000/score";
+
 
 app.post("/api/extract-text",upload.fields([
     { name: "files", maxCount: 10 }, // Resume files
@@ -99,9 +99,9 @@ app.post("/api/extract-text",upload.fields([
 );
 
 app.get("/", (req, res) => {
-  res.send("Hello from server");
+  res.send("API Working !!");
 });
 
-app.listen(port, () => {
-  console.log(`🚀 Server is running on http://localhost:${port}`);
-});
+
+module.exports = app ; 
+
