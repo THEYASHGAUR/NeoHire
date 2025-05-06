@@ -1,0 +1,145 @@
+openapi: 3.0.3
+info:
+  title: NeoHire Backend API
+  version: 1.0.0
+  description: |
+    API documentation for NeoHire backend (authentication and resume extraction).
+servers:
+  - url: https://neohire-backend.onrender.com/
+paths:
+  /auth/register:
+    post:
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+      responses:
+        '201':
+          description: Signup successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  user:
+                    type: object
+        '500':
+          description: Internal server error
+  /auth/login:
+    post:
+      summary: Login user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  session:
+                    type: object
+        '500':
+          description: Internal server error
+  /auth/log-out:
+    post:
+      summary: Logout user
+      requestBody:
+        required: false
+      responses:
+        '200':
+          description: Logout successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '400':
+          description: Bad Request
+        '500':
+          description: Internal server error
+  /api/extract-text:
+    post:
+      summary: Extract text from resumes and job description, then score with AI
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                files:
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+                  description: Resume files (pdf, docx, txt)
+                jd:
+                  type: string
+                  format: binary
+                  description: Job description file (optional)
+      responses:
+        '200':
+          description: Extraction and scoring successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  extracted_resumes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        filename:
+                          type: string
+                        text:
+                          type: string
+                  ai_parsed_resumes:
+                    type: object
+        '500':
+          description: Internal server error
+  /:
+    get:
+      summary: API health check
+      responses:
+        '200':
+          description: API Working !!
+          content:
+            text/plain:
+              schema:
+                type: string
