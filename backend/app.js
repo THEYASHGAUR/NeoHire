@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const upload = multer({ dest: "uploads/" });
-const AI_MODEL_URL = "https://neoagent.onrender.com/score";
+const AI_MODEL_URL = "https://neogen-jt0c.onrender.com/score";
 
 
 app.post("/api/extract-text",upload.fields([
