@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const upload = multer({ dest: "uploads/" });
-const AI_MODEL_URL = "http://localhost:8000/score";
+const AI_MODEL_URL = "https://neogen-jt0c.onrender.com/score";
 
 
 app.post("/api/extract-text",upload.fields([
@@ -97,6 +97,8 @@ app.post("/api/extract-text",upload.fields([
     }
   }
 );
+
+app.use("/auth", require("./routes/authRoutes.js"));
 
 app.get("/", (req, res) => {
   res.send("API Working !!");
