@@ -154,7 +154,7 @@ const ResumeUpload = () => {
         throw new Error("Please upload a job description file");
       }
 
-      const response = await axios.post("http://localhost:5000/api/extract-text", formData, {
+      const response = await axios.post("https://neohire-backend.onrender.com/api/extract-text", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
